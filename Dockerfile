@@ -34,17 +34,17 @@ RUN  add-pkg firefox=${FIREFOX_VERSION}
 # Install extra packages.
 RUN \
     add-pkg \
-        # WebGL support.
-        mesa-dri-gallium \
-        # Audio support.
-        libpulse \
-        # Icons used by folder/file selection window (when saving as).
-        adwaita-icon-theme \
-        # A font is needed.
-        font-dejavu \
-        # The following package is used to send key presses to the X process.
-        xdotool \
-        && \
+            # WebGL support.
+            mesa-dri-gallium \
+            # Audio support.
+            libpulse \
+            # Icons used by folder/file selection window (when saving as).
+            adwaita-icon-theme \
+            # A font is needed.
+            font-dejavu \
+            # The following package is used to send key presses to the X process.
+            xdotool \
+            && \
     # Remove unneeded icons.
     find /usr/share/icons/Adwaita -type d -mindepth 1 -maxdepth 1 -not -name 16x16 -not -name scalable -exec rm -rf {} ';' && \
     true
