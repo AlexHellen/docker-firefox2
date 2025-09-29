@@ -66,7 +66,7 @@ RUN \
 ENV \
     FF_OPEN_URL= \
     FF_KIOSK=0 \
-    FF_CUSTOM_ARGS=
+    FF_CUSTOM_ARGS= \
     WEB_PORT=8080
 
 # Metadata.
